@@ -1,0 +1,38 @@
+//*** Genotypic frequencies equilibrium criteria: 10e-x, x = ? (0<x<9)
+
+//*** Number of frequency classes for frequencies distribution estimation? (0=no distribution)
+100
+//*** Number of diploid individuals in the populations?
+1000
+//*** Mutation rate (per individual per generation)?
+0
+//*** Minimal frequency of an allele to be counted?
+0
+//*** Number of forget generations?
+0
+//*** Number of generations in a single repetition (after forget generations)?
+100000
+//*** Number of repetitions?
+100
+//*** Sample size? 
+0
+//*** Number of generations between sampling?
+1000
+//*** File name for initial (observed) genotypic frequencies? (with extension)
+genotype_freq.txt
+//*** File name for dominance relationships in pollen? (with extension)
+MaledomNivelle.txt
+//*** File name for dominance relationships in pistil? (with extension)
+FemaledomNivelle.txt
+//*** File name for simple dominance relationships? (with extension)
+dom_param.txt
+
+//*** First seed for the pseudo-random number generator: 465
+
+
+// Last Analysis: Wed Jan 31 19:04:04 2007
+
+
+//      Computations: Genotypic and Allelic frequencies change distributions in a generation.
+//      Type of frequency dependent selection: Male way only (Wright's classical model).
+//      Dominance relationships: simple (dom, domcod or cod)

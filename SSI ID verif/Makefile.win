@@ -1,0 +1,42 @@
+# Project: Projet2
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o ../../../../Dev-Cpp/include/Proba/mersenne.o ../../../../Dev-Cpp/include/Proba/stoc1.o ../../../../Dev-Cpp/include/Proba/userintf.o ssi.o $(RES)
+LINKOBJ  = main.o ../../../../Dev-Cpp/include/Proba/mersenne.o ../../../../Dev-Cpp/include/Proba/stoc1.o ../../../../Dev-Cpp/include/Proba/userintf.o ssi.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/include/Proba"  -g3 
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/include/Proba"  -I"C:/Dev-Cpp/include/Proba" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/bio++"  -I"C:/Dev-Cpp/include/Proba" 
+BIN  = SSI.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before SSI.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "SSI.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+../../../../Dev-Cpp/include/Proba/mersenne.o: ../../../../Dev-Cpp/include/Proba/mersenne.cpp
+	$(CPP) -c ../../../../Dev-Cpp/include/Proba/mersenne.cpp -o ../../../../Dev-Cpp/include/Proba/mersenne.o $(CXXFLAGS)
+
+../../../../Dev-Cpp/include/Proba/stoc1.o: ../../../../Dev-Cpp/include/Proba/stoc1.cpp
+	$(CPP) -c ../../../../Dev-Cpp/include/Proba/stoc1.cpp -o ../../../../Dev-Cpp/include/Proba/stoc1.o $(CXXFLAGS)
+
+../../../../Dev-Cpp/include/Proba/userintf.o: ../../../../Dev-Cpp/include/Proba/userintf.cpp
+	$(CPP) -c ../../../../Dev-Cpp/include/Proba/userintf.cpp -o ../../../../Dev-Cpp/include/Proba/userintf.o $(CXXFLAGS)
+
+ssi.o: ssi.cpp
+	$(CPP) -c ssi.cpp -o ssi.o $(CXXFLAGS)
